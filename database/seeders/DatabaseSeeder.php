@@ -17,9 +17,9 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         \App\Models\User::factory()->count(50)->create();
 
-        \App\Models\Level::factory()->create(['name'=>'Plata']);
-        \App\Models\Level::factory()->create(['name'=>'Bronce']);
-        \App\Models\Level::factory()->create(['name'=>'Oro']);
+        \App\Models\Level::factory()->create(['name'=>'Plata','description'=>'quito']);
+        \App\Models\Level::factory()->create(['name'=>'Bronce','description'=>'hosl']);
+        \App\Models\Level::factory()->create(['name'=>'Oro','description'=>'jkfdjdf']);
         
         \App\Models\Perfil::factory()->create(['nombre'=>'Perfil1','user_id'=>'1']);
         \App\Models\Perfil::factory()->create(['nombre'=>'Perfil2','user_id'=>'2']);
