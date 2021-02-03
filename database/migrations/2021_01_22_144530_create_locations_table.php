@@ -16,7 +16,7 @@ class CreateLocationsTable extends Migration
         Schema::create('locations', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('perfil_id')->unsigned()->nullable();
-            $table->string('country')->unsigned();
+            $table->string('country')->unsigned()->nullable();
             $table->foreign('perfil_id')->references('id')->on('perfils')
             ->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

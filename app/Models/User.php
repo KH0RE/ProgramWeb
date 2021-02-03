@@ -55,7 +55,7 @@ class User extends Authenticatable
     }
     
     public function groups(){
-        return $this-> belongsTo(Group::class)->withTimestamps();
+        return $this-> belongsToMany(Group::class)->withTimestamps();
     }
 
      public function location(){
