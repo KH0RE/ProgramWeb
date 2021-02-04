@@ -12,17 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('user', 'App\Http\Controllers\UserController@user')->name('product.user');
+Route::get('create', 'App\Http\Controllers\UserController@create')->name('create.product');
+Route::get('group', 'App\Http\Controllers\GroupController@group')->name('grup.group');
 
-Route::get('/', function () {
-    return view('routes');
-});
-
-
-Route::get('routes', function () {
-    return request ('search');
-});
-
-
-Route::post('routes', function () {
-    return request ('search');
-});
+Route::post('post', 'App\Http\Controllers\UserController@Store')->name('product.store');
