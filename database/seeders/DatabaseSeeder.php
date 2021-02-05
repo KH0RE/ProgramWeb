@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\Level::factory()->create(['name'=>'Plata','description'=>'quito']);
         \App\Models\Level::factory()->create(['name'=>'Bronce','description'=>'hosl']);
         \App\Models\Level::factory()->create(['name'=>'Oro','description'=>'jkfdjdf']);
-        
+
         \App\Models\Perfil::factory()->create(['nombre'=>'Perfil1','user_id'=>'1']);
         \App\Models\Perfil::factory()->create(['nombre'=>'Perfil2','user_id'=>'2']);
         \App\Models\Perfil::factory()->create(['nombre'=>'Perfil3','user_id'=>'3']);
@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\Group::factory()->create(['country'=>'Ecuador']);
 
 */
-        \App\Models\Group::factory(3)->create(); 
+      /*  \App\Models\Group::factory(3)->create();
         \App\Models\Level::factory()->create(['name'=>'Oro']);
         \App\Models\Level::factory()->create(['name'=>'Bronce']);
         \App\Models\Level::factory()->create(['name'=>'Plata']);
@@ -44,19 +44,23 @@ class DatabaseSeeder extends Seeder
             $user->groups()->attach($this->array(rand(1,3)));
         });
 
-    } 
+    }
         public function array($max){
             $values=[];
             for($_REQUEST["i"]=1;$_REQUEST["i"]<$max;$_REQUEST["i"]++){
                $values[]=$_REQUEST["i"];
             }
             return $values;
-            
-            
-        }
+
+
+        }*/
+
+
+        \App\Models\User::factory(20)->create();
+
     }
-    
-    
-    
-    
+
+
+ }
+
 

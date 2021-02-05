@@ -9,6 +9,9 @@ use DB ;
 
 class UserController extends Controller
 {
+
+    //Using Views :v
+
     public function user(){
             $product =DB::table('users')->get();
             return view('user', compact('product'));
@@ -24,10 +27,13 @@ class UserController extends Controller
         $data['name'] = $request->name;
         $data['email'] = $request->email;
         $data['password'] = $request->password;
-        
+
         $product =DB::table('users')->insert($data);
         return redirect()->route('product.user');
-        
+
 
     }
+
+
+
 }
